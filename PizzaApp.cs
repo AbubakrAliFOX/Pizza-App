@@ -12,6 +12,20 @@ namespace Pizza_App
 {
     public partial class PizzaApp : Form
     {
+        void UpdateSize ()
+        {
+            if (rbSmall.Checked)
+            {
+                lblSize.Text = "Small";
+            } else if (rbMedium.Checked)
+            {
+                lblSize.Text = "Medium";
+            } else if (rbLarge.Checked)
+            {
+                lblSize.Text = "Large";
+            }
+        }
+
         public PizzaApp()
         {
             InitializeComponent();
@@ -22,14 +36,24 @@ namespace Pizza_App
 
         }
 
-        private void gbSize_Enter(object sender, EventArgs e)
+        private void btnOrder_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        private void rbLarge_CheckedChanged(object sender, EventArgs e)
         {
+            UpdateSize();
+        }
 
+        private void rbMedium_CheckedChanged(object sender, EventArgs e)
+        {
+            UpdateSize();
+        }
+
+        private void rbSmall_CheckedChanged(object sender, EventArgs e)
+        {
+            UpdateSize();
         }
     }
 }
