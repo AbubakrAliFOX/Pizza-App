@@ -428,6 +428,7 @@
             this.btnReset.TabIndex = 13;
             this.btnReset.Text = "Reset Form";
             this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // PizzaApp
             // 

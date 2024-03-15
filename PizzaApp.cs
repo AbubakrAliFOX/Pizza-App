@@ -68,6 +68,22 @@ namespace Pizza_App
             lblToppings.Text = wantedToppings;
         }
 
+        void DisableForm()
+        {
+            gbCrust.Enabled = false;
+            gbSize.Enabled = false;
+            gbToppings.Enabled = false;
+            gbWhereToEat.Enabled = false;
+        }
+
+        void EnableForm()
+        {
+            gbCrust.Enabled = true;
+            gbSize.Enabled = true;
+            gbToppings.Enabled = true;
+            gbWhereToEat.Enabled = true;
+        }
+
         public PizzaApp()
         {
             InitializeComponent();
@@ -80,7 +96,17 @@ namespace Pizza_App
 
         private void btnOrder_Click(object sender, EventArgs e)
         {
-
+            if (MessageBox.Show("Confirm Order?", "Confirmation", 
+                MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+            {
+                MessageBox.Show("Order Placed Successfully", "Success!", 
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                DisableForm();
+            }
+        }
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            EnableForm();
         }
 
         private void rbSize_CheckedChanged (object sender, EventArgs e)
@@ -118,5 +144,6 @@ namespace Pizza_App
             toppingsPrice = selectedToppings.Count == 0 ? (0) :(selectedToppings.Count * 5);
             UpdatePrice();
         }
+
     }
 }
