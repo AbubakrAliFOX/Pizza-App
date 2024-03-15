@@ -12,17 +12,43 @@ namespace Pizza_App
 {
     public partial class PizzaApp : Form
     {
-        void UpdateSize ()
+        void UpdateSize()
         {
             if (rbSmall.Checked)
             {
                 lblSize.Text = "Small";
-            } else if (rbMedium.Checked)
+            }
+            else if (rbMedium.Checked)
             {
                 lblSize.Text = "Medium";
-            } else if (rbLarge.Checked)
+            }
+            else if (rbLarge.Checked)
             {
                 lblSize.Text = "Large";
+            }
+        }
+
+        void UpdateCrust()
+        {
+            if (rbThick.Checked)
+            {
+                lblCrust.Text = "Thick";
+            }
+            else if (rbThin.Checked)
+            {
+                lblCrust.Text = "Thin";
+            }
+        }
+
+        void UpdateWhereToEat()
+        {
+            if (rbEatIn.Checked)
+            {
+                lblWhereToEat.Text = "Eat In";
+            }
+            else if (rbTakeOut.Checked)
+            {
+                lblWhereToEat.Text = "Take Out";
             }
         }
 
@@ -55,5 +81,26 @@ namespace Pizza_App
         {
             UpdateSize();
         }
+
+        private void rbThick_CheckedChanged(object sender, EventArgs e)
+        {
+            UpdateCrust();
+        }
+
+        private void rbThin_CheckedChanged(object sender, EventArgs e)
+        {
+            UpdateCrust();
+        }
+
+        private void rbEatIn_CheckedChanged(object sender, EventArgs e)
+        {
+            UpdateWhereToEat();
+        }
+
+        private void rbTakeOut_CheckedChanged(object sender, EventArgs e)
+        {
+            UpdateWhereToEat();
+        }
+
     }
 }

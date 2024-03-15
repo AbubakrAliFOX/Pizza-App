@@ -35,7 +35,7 @@
             this.gbCrust = new System.Windows.Forms.GroupBox();
             this.rbThin = new System.Windows.Forms.RadioButton();
             this.rbThick = new System.Windows.Forms.RadioButton();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.gbWhereToEat = new System.Windows.Forms.GroupBox();
             this.rbTakeOut = new System.Windows.Forms.RadioButton();
             this.rbEatIn = new System.Windows.Forms.RadioButton();
             this.gbToppings = new System.Windows.Forms.GroupBox();
@@ -60,7 +60,7 @@
             this.btnReset = new System.Windows.Forms.Button();
             this.gbSize.SuspendLayout();
             this.gbCrust.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.gbWhereToEat.SuspendLayout();
             this.gbToppings.SuspendLayout();
             this.gbSummary.SuspendLayout();
             this.SuspendLayout();
@@ -87,8 +87,10 @@
             this.rbSmall.Size = new System.Drawing.Size(72, 24);
             this.rbSmall.TabIndex = 4;
             this.rbSmall.TabStop = true;
+            this.rbSmall.Tag = "40";
             this.rbSmall.Text = "Small";
             this.rbSmall.UseVisualStyleBackColor = true;
+            this.rbSmall.CheckedChanged += new System.EventHandler(this.rbSmall_CheckedChanged);
             // 
             // rbMedium
             // 
@@ -99,6 +101,7 @@
             this.rbMedium.Size = new System.Drawing.Size(89, 24);
             this.rbMedium.TabIndex = 3;
             this.rbMedium.TabStop = true;
+            this.rbMedium.Tag = "30";
             this.rbMedium.Text = "Medium";
             this.rbMedium.UseVisualStyleBackColor = true;
             // 
@@ -111,6 +114,7 @@
             this.rbLarge.Size = new System.Drawing.Size(73, 24);
             this.rbLarge.TabIndex = 0;
             this.rbLarge.TabStop = true;
+            this.rbLarge.Tag = "20";
             this.rbLarge.Text = "Large";
             this.rbLarge.UseVisualStyleBackColor = true;
             this.rbLarge.CheckedChanged += new System.EventHandler(this.rbLarge_CheckedChanged);
@@ -136,8 +140,10 @@
             this.rbThin.Size = new System.Drawing.Size(62, 24);
             this.rbThin.TabIndex = 3;
             this.rbThin.TabStop = true;
+            this.rbThin.Tag = "0";
             this.rbThin.Text = "Thin";
             this.rbThin.UseVisualStyleBackColor = true;
+            this.rbThin.CheckedChanged += new System.EventHandler(this.rbThin_CheckedChanged);
             // 
             // rbThick
             // 
@@ -148,20 +154,22 @@
             this.rbThick.Size = new System.Drawing.Size(70, 24);
             this.rbThick.TabIndex = 0;
             this.rbThick.TabStop = true;
+            this.rbThick.Tag = "10";
             this.rbThick.Text = "Thick";
             this.rbThick.UseVisualStyleBackColor = true;
+            this.rbThick.CheckedChanged += new System.EventHandler(this.rbThick_CheckedChanged);
             // 
-            // groupBox1
+            // gbWhereToEat
             // 
-            this.groupBox1.Controls.Add(this.rbTakeOut);
-            this.groupBox1.Controls.Add(this.rbEatIn);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(322, 272);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(259, 152);
-            this.groupBox1.TabIndex = 6;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Where To Eat?";
+            this.gbWhereToEat.Controls.Add(this.rbTakeOut);
+            this.gbWhereToEat.Controls.Add(this.rbEatIn);
+            this.gbWhereToEat.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbWhereToEat.Location = new System.Drawing.Point(322, 272);
+            this.gbWhereToEat.Name = "gbWhereToEat";
+            this.gbWhereToEat.Size = new System.Drawing.Size(259, 152);
+            this.gbWhereToEat.TabIndex = 6;
+            this.gbWhereToEat.TabStop = false;
+            this.gbWhereToEat.Text = "Where To Eat?";
             // 
             // rbTakeOut
             // 
@@ -174,6 +182,7 @@
             this.rbTakeOut.TabStop = true;
             this.rbTakeOut.Text = "Take Out";
             this.rbTakeOut.UseVisualStyleBackColor = true;
+            this.rbTakeOut.CheckedChanged += new System.EventHandler(this.rbTakeOut_CheckedChanged);
             // 
             // rbEatIn
             // 
@@ -186,6 +195,7 @@
             this.rbEatIn.TabStop = true;
             this.rbEatIn.Text = "Eat In";
             this.rbEatIn.UseVisualStyleBackColor = true;
+            this.rbEatIn.CheckedChanged += new System.EventHandler(this.rbEatIn_CheckedChanged);
             // 
             // gbToppings
             // 
@@ -211,6 +221,7 @@
             this.chkPepper.Name = "chkPepper";
             this.chkPepper.Size = new System.Drawing.Size(135, 24);
             this.chkPepper.TabIndex = 10;
+            this.chkPepper.Tag = "5";
             this.chkPepper.Text = "Green Pepper";
             this.chkPepper.UseVisualStyleBackColor = true;
             // 
@@ -222,6 +233,7 @@
             this.chkOlives.Name = "chkOlives";
             this.chkOlives.Size = new System.Drawing.Size(78, 24);
             this.chkOlives.TabIndex = 9;
+            this.chkOlives.Tag = "5";
             this.chkOlives.Text = "Olives";
             this.chkOlives.UseVisualStyleBackColor = true;
             // 
@@ -233,6 +245,7 @@
             this.chkOnion.Name = "chkOnion";
             this.chkOnion.Size = new System.Drawing.Size(75, 24);
             this.chkOnion.TabIndex = 8;
+            this.chkOnion.Tag = "5";
             this.chkOnion.Text = "Onion";
             this.chkOnion.UseVisualStyleBackColor = true;
             // 
@@ -244,6 +257,7 @@
             this.chkTomatoes.Name = "chkTomatoes";
             this.chkTomatoes.Size = new System.Drawing.Size(105, 24);
             this.chkTomatoes.TabIndex = 7;
+            this.chkTomatoes.Tag = "5";
             this.chkTomatoes.Text = "Tomatoes";
             this.chkTomatoes.UseVisualStyleBackColor = true;
             // 
@@ -255,6 +269,7 @@
             this.chkMushrooms.Name = "chkMushrooms";
             this.chkMushrooms.Size = new System.Drawing.Size(119, 24);
             this.chkMushrooms.TabIndex = 6;
+            this.chkMushrooms.Tag = "5";
             this.chkMushrooms.Text = "Mushrooms";
             this.chkMushrooms.UseVisualStyleBackColor = true;
             // 
@@ -266,6 +281,7 @@
             this.chkCheese.Name = "chkCheese";
             this.chkCheese.Size = new System.Drawing.Size(132, 24);
             this.chkCheese.TabIndex = 5;
+            this.chkCheese.Tag = "5";
             this.chkCheese.Text = "Extra Cheese";
             this.chkCheese.UseVisualStyleBackColor = true;
             // 
@@ -414,7 +430,7 @@
             this.Controls.Add(this.btnOrder);
             this.Controls.Add(this.gbSummary);
             this.Controls.Add(this.gbToppings);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.gbWhereToEat);
             this.Controls.Add(this.gbCrust);
             this.Controls.Add(this.gbSize);
             this.Name = "PizzaApp";
@@ -424,8 +440,8 @@
             this.gbSize.PerformLayout();
             this.gbCrust.ResumeLayout(false);
             this.gbCrust.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.gbWhereToEat.ResumeLayout(false);
+            this.gbWhereToEat.PerformLayout();
             this.gbToppings.ResumeLayout(false);
             this.gbToppings.PerformLayout();
             this.gbSummary.ResumeLayout(false);
@@ -443,7 +459,7 @@
         private System.Windows.Forms.GroupBox gbCrust;
         private System.Windows.Forms.RadioButton rbThin;
         private System.Windows.Forms.RadioButton rbThick;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox gbWhereToEat;
         private System.Windows.Forms.RadioButton rbTakeOut;
         private System.Windows.Forms.RadioButton rbEatIn;
         private System.Windows.Forms.GroupBox gbToppings;
