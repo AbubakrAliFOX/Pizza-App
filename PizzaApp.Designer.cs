@@ -224,6 +224,7 @@
             this.chkPepper.Tag = "5";
             this.chkPepper.Text = "Green Pepper";
             this.chkPepper.UseVisualStyleBackColor = true;
+            this.chkPepper.CheckedChanged += new System.EventHandler(this.toppingsCheckChanged);
             // 
             // chkOlives
             // 
@@ -236,6 +237,7 @@
             this.chkOlives.Tag = "5";
             this.chkOlives.Text = "Olives";
             this.chkOlives.UseVisualStyleBackColor = true;
+            this.chkOlives.CheckedChanged += new System.EventHandler(this.toppingsCheckChanged);
             // 
             // chkOnion
             // 
@@ -248,6 +250,7 @@
             this.chkOnion.Tag = "5";
             this.chkOnion.Text = "Onion";
             this.chkOnion.UseVisualStyleBackColor = true;
+            this.chkOnion.CheckedChanged += new System.EventHandler(this.toppingsCheckChanged);
             // 
             // chkTomatoes
             // 
@@ -260,6 +263,7 @@
             this.chkTomatoes.Tag = "5";
             this.chkTomatoes.Text = "Tomatoes";
             this.chkTomatoes.UseVisualStyleBackColor = true;
+            this.chkTomatoes.CheckedChanged += new System.EventHandler(this.toppingsCheckChanged);
             // 
             // chkMushrooms
             // 
@@ -272,6 +276,7 @@
             this.chkMushrooms.Tag = "5";
             this.chkMushrooms.Text = "Mushrooms";
             this.chkMushrooms.UseVisualStyleBackColor = true;
+            this.chkMushrooms.CheckedChanged += new System.EventHandler(this.toppingsCheckChanged);
             // 
             // chkCheese
             // 
@@ -284,6 +289,7 @@
             this.chkCheese.Tag = "5";
             this.chkCheese.Text = "Extra Cheese";
             this.chkCheese.UseVisualStyleBackColor = true;
+            this.chkCheese.CheckedChanged += new System.EventHandler(this.toppingsCheckChanged);
             // 
             // gbSummary
             // 
@@ -300,7 +306,7 @@
             this.gbSummary.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbSummary.Location = new System.Drawing.Point(731, 36);
             this.gbSummary.Name = "gbSummary";
-            this.gbSummary.Size = new System.Drawing.Size(332, 388);
+            this.gbSummary.Size = new System.Drawing.Size(472, 388);
             this.gbSummary.TabIndex = 11;
             this.gbSummary.TabStop = false;
             this.gbSummary.Text = "Summary";
@@ -389,6 +395,7 @@
             this.lblToppings.AutoSize = true;
             this.lblToppings.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblToppings.Location = new System.Drawing.Point(182, 105);
+            this.lblToppings.MaximumSize = new System.Drawing.Size(300, 0);
             this.lblToppings.Name = "lblToppings";
             this.lblToppings.Size = new System.Drawing.Size(0, 20);
             this.lblToppings.TabIndex = 1;
@@ -414,7 +421,7 @@
             // 
             // btnReset
             // 
-            this.btnReset.Location = new System.Drawing.Point(932, 445);
+            this.btnReset.Location = new System.Drawing.Point(1075, 445);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(128, 52);
             this.btnReset.TabIndex = 13;

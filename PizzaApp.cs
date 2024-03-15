@@ -52,6 +52,16 @@ namespace Pizza_App
             }
         }
 
+        void UpdateToppings(List<string> selectedToppings)
+        {
+            string wantedToppings = "";
+            foreach (string topping in selectedToppings)
+            {
+                wantedToppings += $"{topping}, ";
+            }
+            lblToppings.Text = wantedToppings;
+        }
+
         public PizzaApp()
         {
             InitializeComponent();
@@ -100,6 +110,23 @@ namespace Pizza_App
         private void rbTakeOut_CheckedChanged(object sender, EventArgs e)
         {
             UpdateWhereToEat();
+        }
+
+        List<string> selectedToppings = new List<string>();
+        private void toppingsCheckChanged(object sender, EventArgs e)
+        {
+            CheckBox checkBox = (CheckBox)sender;
+
+            if (checkBox.Checked)
+            {
+                selectedToppings.Add(checkBox.Text);
+            } else
+            {
+                selectedToppings.Remove(checkBox.Text);
+
+            }
+
+            UpdateToppings(selectedToppings);
         }
 
     }
