@@ -90,7 +90,7 @@
             this.rbSmall.Tag = "40";
             this.rbSmall.Text = "Small";
             this.rbSmall.UseVisualStyleBackColor = true;
-            this.rbSmall.CheckedChanged += new System.EventHandler(this.rbSmall_CheckedChanged);
+            this.rbSmall.CheckedChanged += new System.EventHandler(this.rbSize_CheckedChanged);
             // 
             // rbMedium
             // 
@@ -104,6 +104,7 @@
             this.rbMedium.Tag = "30";
             this.rbMedium.Text = "Medium";
             this.rbMedium.UseVisualStyleBackColor = true;
+            this.rbMedium.CheckedChanged += new System.EventHandler(this.rbSize_CheckedChanged);
             // 
             // rbLarge
             // 
@@ -117,7 +118,7 @@
             this.rbLarge.Tag = "20";
             this.rbLarge.Text = "Large";
             this.rbLarge.UseVisualStyleBackColor = true;
-            this.rbLarge.CheckedChanged += new System.EventHandler(this.rbLarge_CheckedChanged);
+            this.rbLarge.CheckedChanged += new System.EventHandler(this.rbSize_CheckedChanged);
             // 
             // gbCrust
             // 
@@ -143,7 +144,7 @@
             this.rbThin.Tag = "0";
             this.rbThin.Text = "Thin";
             this.rbThin.UseVisualStyleBackColor = true;
-            this.rbThin.CheckedChanged += new System.EventHandler(this.rbThin_CheckedChanged);
+            this.rbThin.CheckedChanged += new System.EventHandler(this.rbCrust_CheckedChanged);
             // 
             // rbThick
             // 
@@ -157,7 +158,7 @@
             this.rbThick.Tag = "10";
             this.rbThick.Text = "Thick";
             this.rbThick.UseVisualStyleBackColor = true;
-            this.rbThick.CheckedChanged += new System.EventHandler(this.rbThick_CheckedChanged);
+            this.rbThick.CheckedChanged += new System.EventHandler(this.rbCrust_CheckedChanged);
             // 
             // gbWhereToEat
             // 
@@ -182,7 +183,7 @@
             this.rbTakeOut.TabStop = true;
             this.rbTakeOut.Text = "Take Out";
             this.rbTakeOut.UseVisualStyleBackColor = true;
-            this.rbTakeOut.CheckedChanged += new System.EventHandler(this.rbTakeOut_CheckedChanged);
+            this.rbTakeOut.CheckedChanged += new System.EventHandler(this.rbWhereToEat_CheckedChanged);
             // 
             // rbEatIn
             // 
@@ -195,7 +196,7 @@
             this.rbEatIn.TabStop = true;
             this.rbEatIn.Text = "Eat In";
             this.rbEatIn.UseVisualStyleBackColor = true;
-            this.rbEatIn.CheckedChanged += new System.EventHandler(this.rbEatIn_CheckedChanged);
+            this.rbEatIn.CheckedChanged += new System.EventHandler(this.rbWhereToEat_CheckedChanged);
             // 
             // gbToppings
             // 

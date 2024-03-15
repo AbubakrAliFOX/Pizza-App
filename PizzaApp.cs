@@ -12,44 +12,19 @@ namespace Pizza_App
 {
     public partial class PizzaApp : Form
     {
-        void UpdateSize()
+        void UpdateSize(RadioButton rb)
         {
-            if (rbSmall.Checked)
-            {
-                lblSize.Text = "Small";
-            }
-            else if (rbMedium.Checked)
-            {
-                lblSize.Text = "Medium";
-            }
-            else if (rbLarge.Checked)
-            {
-                lblSize.Text = "Large";
-            }
+            lblSize.Text = rb.Text;
         }
 
-        void UpdateCrust()
+        void UpdateCrust(RadioButton rb)
         {
-            if (rbThick.Checked)
-            {
-                lblCrust.Text = "Thick";
-            }
-            else if (rbThin.Checked)
-            {
-                lblCrust.Text = "Thin";
-            }
+            lblCrust.Text = rb.Text;
         }
 
-        void UpdateWhereToEat()
+        void UpdateWhereToEat(RadioButton rb)
         {
-            if (rbEatIn.Checked)
-            {
-                lblWhereToEat.Text = "Eat In";
-            }
-            else if (rbTakeOut.Checked)
-            {
-                lblWhereToEat.Text = "Take Out";
-            }
+            lblWhereToEat.Text = rb.Text;
         }
 
         void UpdateToppings(List<string> selectedToppings)
@@ -77,39 +52,21 @@ namespace Pizza_App
 
         }
 
-        private void rbLarge_CheckedChanged(object sender, EventArgs e)
+        private void rbSize_CheckedChanged (object sender, EventArgs e)
         {
-            UpdateSize();
+            RadioButton rb = (RadioButton)sender;
+            UpdateSize(rb);
         }
 
-        private void rbMedium_CheckedChanged(object sender, EventArgs e)
+        private void rbCrust_CheckedChanged(object sender, EventArgs e)
         {
-            UpdateSize();
+            RadioButton rb = (RadioButton)sender;
+            UpdateCrust(rb);
         }
-
-        private void rbSmall_CheckedChanged(object sender, EventArgs e)
+        private void rbWhereToEat_CheckedChanged(object sender, EventArgs e)
         {
-            UpdateSize();
-        }
-
-        private void rbThick_CheckedChanged(object sender, EventArgs e)
-        {
-            UpdateCrust();
-        }
-
-        private void rbThin_CheckedChanged(object sender, EventArgs e)
-        {
-            UpdateCrust();
-        }
-
-        private void rbEatIn_CheckedChanged(object sender, EventArgs e)
-        {
-            UpdateWhereToEat();
-        }
-
-        private void rbTakeOut_CheckedChanged(object sender, EventArgs e)
-        {
-            UpdateWhereToEat();
+            RadioButton rb = (RadioButton)sender;
+            UpdateWhereToEat(rb);
         }
 
         List<string> selectedToppings = new List<string>();
