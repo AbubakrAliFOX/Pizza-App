@@ -50,8 +50,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.lblTotal = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.lblWhereToEat = new System.Windows.Forms.Label();
             this.lblCrust = new System.Windows.Forms.Label();
             this.lblToppings = new System.Windows.Forms.Label();
@@ -87,7 +87,7 @@
             this.rbSmall.Size = new System.Drawing.Size(72, 24);
             this.rbSmall.TabIndex = 4;
             this.rbSmall.TabStop = true;
-            this.rbSmall.Tag = "40";
+            this.rbSmall.Tag = "Size";
             this.rbSmall.Text = "Small";
             this.rbSmall.UseVisualStyleBackColor = true;
             this.rbSmall.CheckedChanged += new System.EventHandler(this.rbSize_CheckedChanged);
@@ -101,7 +101,7 @@
             this.rbMedium.Size = new System.Drawing.Size(89, 24);
             this.rbMedium.TabIndex = 3;
             this.rbMedium.TabStop = true;
-            this.rbMedium.Tag = "30";
+            this.rbMedium.Tag = "Size";
             this.rbMedium.Text = "Medium";
             this.rbMedium.UseVisualStyleBackColor = true;
             this.rbMedium.CheckedChanged += new System.EventHandler(this.rbSize_CheckedChanged);
@@ -115,7 +115,7 @@
             this.rbLarge.Size = new System.Drawing.Size(73, 24);
             this.rbLarge.TabIndex = 0;
             this.rbLarge.TabStop = true;
-            this.rbLarge.Tag = "20";
+            this.rbLarge.Tag = "Size";
             this.rbLarge.Text = "Large";
             this.rbLarge.UseVisualStyleBackColor = true;
             this.rbLarge.CheckedChanged += new System.EventHandler(this.rbSize_CheckedChanged);
@@ -298,8 +298,8 @@
             this.gbSummary.Controls.Add(this.label3);
             this.gbSummary.Controls.Add(this.label4);
             this.gbSummary.Controls.Add(this.label5);
-            this.gbSummary.Controls.Add(this.label1);
             this.gbSummary.Controls.Add(this.lblTotal);
+            this.gbSummary.Controls.Add(this.label1);
             this.gbSummary.Controls.Add(this.lblWhereToEat);
             this.gbSummary.Controls.Add(this.lblCrust);
             this.gbSummary.Controls.Add(this.lblToppings);
@@ -352,26 +352,26 @@
             this.label5.TabIndex = 6;
             this.label5.Text = "Size:";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.DarkGreen;
-            this.label1.Location = new System.Drawing.Point(16, 291);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(71, 38);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "60$";
-            // 
             // lblTotal
             // 
             this.lblTotal.AutoSize = true;
-            this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotal.Location = new System.Drawing.Point(19, 247);
+            this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotal.ForeColor = System.Drawing.Color.DarkGreen;
+            this.lblTotal.Location = new System.Drawing.Point(16, 291);
             this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(51, 20);
-            this.lblTotal.TabIndex = 4;
-            this.lblTotal.Text = "Total:";
+            this.lblTotal.Size = new System.Drawing.Size(71, 38);
+            this.lblTotal.TabIndex = 5;
+            this.lblTotal.Text = "20$";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(19, 247);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(51, 20);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Total:";
             // 
             // lblWhereToEat
             // 
@@ -478,8 +478,8 @@
         private System.Windows.Forms.CheckBox chkMushrooms;
         private System.Windows.Forms.CheckBox chkCheese;
         private System.Windows.Forms.GroupBox gbSummary;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblTotal;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblWhereToEat;
         private System.Windows.Forms.Label lblCrust;
         private System.Windows.Forms.Label lblToppings;
