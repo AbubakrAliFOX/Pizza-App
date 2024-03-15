@@ -15,14 +15,13 @@ namespace Pizza_App
     {
         int sizePrice;
         int crustPrice;
-        int toppingsPrice = 0;
-        Dictionary<string, int[]> ItemsPrices ()
+        int toppingsPrice;
+        Dictionary<string, int> sizePrices()
         {
-            Dictionary<string, int[]> Prices = new Dictionary<string, int[] >();
-            Prices["Toppings"] = new int[] { 5 };
-            Prices["Size"] = new int[] { 20, 30, 40 };
-            Prices["Crust"] = new int[] { 0, 10 };
-            Prices["Toppings"] = new int[] { 5 };
+            Dictionary<string, int> Prices = new Dictionary<string, int>();
+            Prices["Small"] = 20;
+            Prices["Medium"] = 30; ;
+            Prices["Large"] = 40;
 
             return Prices;
         }
@@ -32,36 +31,26 @@ namespace Pizza_App
             lblTotal.Text = $"{(sizePrice + crustPrice + toppingsPrice).ToString()}$";
         }                            
 
-        int UpdateSize(RadioButton rb)
+        void UpdateSize(RadioButton rb)
         {
             lblSize.Text = rb.Text;
-            
-            if (rb.Text == "Small")
-            {
-                return 20;
-            } else if (rb.Text == "Medium")
-            {
-                return 30;
-            } else if (rb.Text == "Large") {
-                return 40;
-            } else
-            {
-                return 0;
-            }
+            sizePrice = sizePrices()[rb.Text];
+            UpdatePrice();
         }
 
-        int UpdateCrust(RadioButton rb)
+        void UpdateCrust(RadioButton rb)
         {
             lblCrust.Text = rb.Text;
 
             if (rb.Text == "Thick")
             {
-                return 10;
+                crustPrice = 10;
             }
             else
             {
-                return 0;
+                crustPrice = 0;
             }
+            UpdatePrice();
         }
 
         void UpdateWhereToEat(RadioButton rb)
@@ -97,15 +86,13 @@ namespace Pizza_App
         private void rbSize_CheckedChanged (object sender, EventArgs e)
         {
             RadioButton rb = (RadioButton)sender;
-            sizePrice = UpdateSize(rb);
-            UpdatePrice();
+            UpdateSize(rb);
         }
 
         private void rbCrust_CheckedChanged(object sender, EventArgs e)
         {
             RadioButton rb = (RadioButton)sender;
-            crustPrice = UpdateCrust(rb);
-            UpdatePrice();
+            UpdateCrust(rb);
         }
         private void rbWhereToEat_CheckedChanged(object sender, EventArgs e)
         {
@@ -131,6 +118,5 @@ namespace Pizza_App
             toppingsPrice = selectedToppings.Count == 0 ? (0) :(selectedToppings.Count * 5);
             UpdatePrice();
         }
-
     }
 }
